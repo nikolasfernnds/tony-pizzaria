@@ -1,6 +1,8 @@
 :root{
     --primary-color: #f07807;
     --secundary-color: #f7e5d8;
+    --default-shadow:  0 4px 8px #0005;
+    --defaulty-padding: 0 80px;
 }
 *{
     padding: 0;
@@ -17,20 +19,21 @@
  }
 
  body{
-    padding: 0 80px;
+   font-family: "Poppins", sans-serif;
  }
 
  header{
     display: flex;
     position: fixed;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100vw;
     top: 60px;
     justify-content: space-between;
     align-items: center;
+    padding: var(--defaulty-padding);
  }
 
- header ul{
+ header menu{
     display: flex;
     
     justify-content: space-between;
@@ -45,7 +48,7 @@
  }
 
  header li:hover{
-    box-shadow: 0 4px 8px #0005;
+    box-shadow: var(--default-shadow);
     background-color: var(--secundary-color);
  }
 
@@ -60,19 +63,37 @@
     background-color: var(--secundary-color);
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px #0005;
+ }
 
-
+ .login:hover{
+   box-shadow: var(--default-shadow);
  }
 
  span{
     color: var(--primary-color);
  }
  main{
-   
-    height: 500px;
+
+ }
+
+ section{
+   height: 100vh;
+   padding: var(--defaulty-padding);
+ }
+
+ .home{
+   background-color:var(--secundary-color);
+   background-image: url(../img/background.svg);
+   background-repeat: no-repeat;
+   background-position: top right;
+ }
+ .cardapio{
+   background-color: plum;
+ }
+ .servicos{
+   background-color: lightblue;
  }
  footer{
-    
+
     height: 526px;
  }
