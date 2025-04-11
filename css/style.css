@@ -86,7 +86,85 @@
    background-image: url(../img/background.svg);
    background-repeat: no-repeat;
    background-position: top right;
+   background-size: contain;
+   display: grid;
+   grid-template-rows: 3fr 1fr;
  }
+
+ .container-slogan{
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   gap: 64px;
+ }
+
+ .slogan{
+   position: relative;
+   bottom: 90px;
+   width: 560px;
+   font-size: 4rem;
+   font-weight: 400;
+   font-style: italic;
+ }
+
+ .slogan span{
+   color: var(--primary-color);
+ }
+
+ .container-pizzas{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+.pizza{
+   position: relative;
+   display: flex;
+   align-items: end;
+   overflow: hidden;
+
+}
+.pizza:hover .add-pizza{
+   display: grid;
+   opacity: 1;
+
+
+}
+.add-pizza{
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    border: 3px solid white;
+    color: white;
+    font-size: 2rem;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.container-info{
+   height: 36px;
+   position: absolute;;
+   z-index: 9999;
+   width: 99%;
+   bottom: -36px;
+   border-radius: 0 0 12px 12px;
+   opacity: 60%;
+   background-color: black;
+   transition: .5s;
+}
+.pizza:hover container-info{
+   bottom: 0;
+
+}
+
+.container-info span:nth
+
  .cardapio{
    background-color: plum;
  }
